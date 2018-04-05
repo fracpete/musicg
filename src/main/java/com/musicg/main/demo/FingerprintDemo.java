@@ -25,7 +25,7 @@ public class FingerprintDemo{
 		String filename = "cock_a_1.wav";
 
 		// create a wave object
-		Wave wave = new Wave("audio_work/"+filename);
+		Wave wave = new Wave("src/site/resources/audio/"+filename);
 
 		// get the fingerprint
 		byte[] fingerprint=wave.getFingerprint();

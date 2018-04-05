@@ -22,7 +22,7 @@ import com.musicg.wave.extension.Spectrogram;
 public class RenderSpectrogramDemo {
 	public static void main(String[] args) {
 
-		String inFolder = "audio_work";		
+		String inFolder = "src/site/resources/audio";
 		String outFolder = "out";
 		String filename = "cock_a_1.wav";
 
@@ -37,8 +37,8 @@ public class RenderSpectrogramDemo {
 		render.renderSpectrogram(spectrogram, outFolder + "/"+filename+".jpg");
 
 		// change the spectrogram representation
-		int fftSampleSize = 1024;
-		int overlapFactor = 0;
+		int fftSampleSize = 2048;
+		int overlapFactor = 1;
 		spectrogram = new Spectrogram(wave, fftSampleSize, overlapFactor);
 		render.renderSpectrogram(spectrogram, outFolder + "/"+filename+"2.jpg");
 	}

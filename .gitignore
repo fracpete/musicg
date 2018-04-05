@@ -12,6 +12,3 @@ buildNumber.properties
 *.iml
 *~
 *.swp
-
-rsync-*/
-
