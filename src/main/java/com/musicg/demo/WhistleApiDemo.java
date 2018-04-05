@@ -21,7 +21,7 @@ import com.musicg.wave.WaveTypeDetector;
 public class WhistleApiDemo{
 	public static void main(String[] args){		
 		// create a wave object
-		Wave wave = new Wave("src/site/resources/audio/whistle.wav");
+		Wave wave = new Wave(DemoHelper.getDemoDirectory() + "/whistle.wav");
 
 		WaveTypeDetector waveTypeDetector=new WaveTypeDetector(wave);
 		System.out.println("Is whistle probability: "+waveTypeDetector.getWhistleProbability());

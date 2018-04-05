@@ -25,17 +25,17 @@ public class FingerprintDemo{
 		String filename = "cock_a_1.wav";
 
 		// create a wave object
-		Wave wave = new Wave("src/site/resources/audio/"+filename);
+		Wave wave = new Wave(DemoHelper.getDemoDirectory() + "/" + filename);
 
 		// get the fingerprint
 		byte[] fingerprint=wave.getFingerprint();
 
 		// dump the fingerprint
 		FingerprintManager fingerprintManager=new FingerprintManager();
-		fingerprintManager.saveFingerprintAsFile(fingerprint, "out/"+filename+".fingerprint");
+		fingerprintManager.saveFingerprintAsFile(fingerprint, DemoHelper.getOutputDirectory() + "/" + filename + ".fingerprint");
 		
 		// load fingerprint from file
-		byte[] loadedFp=fingerprintManager.getFingerprintFromFile("out/"+filename+".fingerprint");
+		byte[] loadedFp=fingerprintManager.getFingerprintFromFile(DemoHelper.getOutputDirectory() + "/" + filename + ".fingerprint");
 		
 		/*
 		// fingerprint bytes checking

@@ -31,3 +31,5 @@ Demo classes:
 * `com.musicg.demo.RenderWaveformDemo`
 * `com.musicg.demo.WaveDemo`
 * `com.musicg.demo.WhistleApiDemo`
+
+NB: Some of the demo classes generate output, which gets stored in the `out` directory.

@@ -8,7 +8,7 @@ public class PitchDemo{
 	
 	public static void main(String[] args){
 		
-		String filename = "src/site/resources/audio/cock_a_1.wav";
+		String filename = DemoHelper.getDemoDirectory() + "/cock_a_1.wav";
 
 		// create a wave object
 		Wave wave = new Wave(filename);

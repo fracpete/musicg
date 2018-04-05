@@ -21,8 +21,7 @@ import com.musicg.wave.Wave;
 public class RenderWaveformDemo {
 	public static void main(String[] args) {
 
-		String filename = "src/site/resources/audio/cock_a_1.wav";
-		String outFolder = "out";
+		String filename = DemoHelper.getDemoDirectory() + "/cock_a_1.wav";
 
 		// create a wave object
 		Wave wave = new Wave(filename);
@@ -31,10 +30,10 @@ public class RenderWaveformDemo {
 		GraphicRender render=new GraphicRender();
 		//render.setHorizontalMarker(1);
 		//render.setVerticalMarker(1);
-		render.renderWaveform(wave, outFolder+"/waveform.jpg");
+		render.renderWaveform(wave, DemoHelper.getOutputDirectory() + "/waveform.jpg");
 		
 		// change the amplitude representation
 		float timeStep=0.05F;
-		render.renderWaveform(wave,timeStep,outFolder+"/waveform2.jpg");
+		render.renderWaveform(wave,timeStep,DemoHelper.getOutputDirectory() + "/waveform2.jpg");
 	}
 }

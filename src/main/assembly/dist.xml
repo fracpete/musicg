@@ -9,6 +9,13 @@
     <format>zip</format>
   </formats>
 
+  <files>
+    <file>
+      <source>${project.basedir}/src/main/assembly/config/ignore.me</source>
+      <outputDirectory>out</outputDirectory>
+    </file>
+  </files>
+
   <fileSets>
     <fileSet>
       <directory>${project.basedir}/src/site/resources/audio</directory>
