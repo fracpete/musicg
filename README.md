@@ -9,7 +9,7 @@ like reading, cutting and trimming easily from an inputstream. It also provides
 tools for digital signal processing, renders the wavform or spectrogram for
 research and development purpose.
 
-Current features:
+## Features
 
 * Clap Api - Detect whether the input audio is a clap
 * Whistle Api - Detect whether the input audio is a whistle
@@ -19,10 +19,12 @@ Current features:
 * Save the edited audio file
 * Read amplitude-time domain data
 * Read frequency-time domain data
-* Render audio wave form image (Requires Java 2D & Java Image I/O, Android non-compatible)
-* Render audio spectrogram image (Requires Java 2D & Java Image I/O, Android non-compatible)
+* Render audio wave form image
+* Render audio spectrogram image
 
-Demo classes:
+## Demo classes
+
+The following demo classes are available:
 
 * `com.musicg.demo.FingerprintDemo`
 * `com.musicg.demo.FingerprintRecognitionDemo`
@@ -33,3 +35,15 @@ Demo classes:
 * `com.musicg.demo.WhistleApiDemo`
 
 NB: Some of the demo classes generate output, which gets stored in the `out` directory.
+
+## Maven
+
+Add the following dependency to your `pom.xml`:
+
+```xml
+  <dependency>
+    <groupId>com.github.fracpete</groupId>
+    <artifactId>musicg</artifactId>
+    <version>1.4.2.1</version>
+  </dependency>
+```
