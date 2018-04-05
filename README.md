@@ -47,3 +47,9 @@ Add the following dependency to your `pom.xml`:
     <version>1.4.2.1</version>
   </dependency>
 ```
+
+## Releases
+
+The following releases are available:
+
+* [1.4.2.1](https://github.com/fracpete/musicg/releases/tag/musicg-1.4.2.1)
