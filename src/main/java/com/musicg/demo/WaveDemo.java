@@ -28,11 +28,14 @@ public class WaveDemo {
 		Wave wave = new Wave(filename);
 
 		// print the wave header and info
-		System.out.println(wave);
+		System.out.println("input:\n" + wave);
 
 		// trim the wav
 		wave.leftTrim(1);
 		wave.rightTrim(0.5F);
+
+		// print the wave header and info
+		System.out.println("\ntrimmed:\n" + wave);
 
 		// save the trimmed wav
 		WaveFileManager waveFileManager=new WaveFileManager(wave);
