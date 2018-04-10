@@ -44,7 +44,7 @@ Add the following dependency to your `pom.xml`:
   <dependency>
     <groupId>com.github.fracpete</groupId>
     <artifactId>musicg</artifactId>
-    <version>1.4.2.1</version>
+    <version>1.4.2.2</version>
   </dependency>
 ```
 
@@ -52,4 +52,5 @@ Add the following dependency to your `pom.xml`:
 
 The following releases are available:
 
+* [1.4.2.2](https://github.com/fracpete/musicg/releases/tag/musicg-1.4.2.2)
 * [1.4.2.1](https://github.com/fracpete/musicg/releases/tag/musicg-1.4.2.1)
