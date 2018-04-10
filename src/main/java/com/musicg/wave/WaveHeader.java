@@ -18,6 +18,7 @@ package com.musicg.wave;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.Serializable;
 
 /**
  * WAV File Specification
@@ -25,7 +26,8 @@ import java.io.InputStream;
  * 
  * @author Jacquet Wong
  */
-public class WaveHeader {
+public class WaveHeader
+	implements Serializable, Cloneable {
 
 	public static final String RIFF_HEADER = "RIFF";
 	public static final String WAVE_HEADER = "WAVE";
@@ -258,6 +260,25 @@ public class WaveHeader {
 		this.subChunk2Size = subChunk2Size;
 	}
 
+	public WaveHeader clone() {
+		WaveHeader result = new WaveHeader();
+		result.valid = valid;
+		result.chunkId = chunkId;
+		result.chunkSize = chunkSize;
+		result.format = format;
+		result.subChunk1Id = subChunk1Id;
+		result.subChunk1Size = subChunk1Size;
+		result.audioFormat = audioFormat;
+		result.channels = channels;
+		result.sampleRate = sampleRate;
+		result.byteRate = byteRate;
+		result.blockAlign = blockAlign;
+		result.bitsPerSample = bitsPerSample;
+		result.subChunk2Id = subChunk2Id;
+		result.subChunk2Size = subChunk2Size;
+		return result;
+	}
+	
 	public String toString() {
 
 		StringBuffer sb = new StringBuffer();

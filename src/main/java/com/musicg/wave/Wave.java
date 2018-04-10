@@ -33,7 +33,8 @@ import com.musicg.wave.extension.Spectrogram;
  *
  * @author Jacquet Wong
  */
-public class Wave implements Serializable{
+public class Wave
+	implements Serializable, Cloneable{
 
 	private static final long serialVersionUID = 1L;
 	private WaveHeader waveHeader;
@@ -345,5 +346,15 @@ public class Wave implements Serializable{
 
 		float second = (float) waveHeader.getSubChunk2Size() / waveHeader.getByteRate();
 		return second;
+	}
+
+	public Wave clone() {
+		Wave result = new Wave();
+		result.waveHeader = waveHeader.clone();
+		if (data != null)
+			result.data = data.clone();
+		if (fingerprint != null)
+			result.fingerprint = fingerprint.clone();
+		return result;
 	}
 }
